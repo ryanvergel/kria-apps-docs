@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
 <!-- OneTrust Cookies Consent Notice start for xilinx.github.io -->
@@ -26,11 +27,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/documentation_options.js?v=2406f4f9"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -48,7 +47,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
             <a href="../../../index.html" class="icon icon-home"> Kria™ KR260
-            <img src="../../../_static/xilinx-header-logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2022.1
@@ -70,9 +68,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/bootfw.html">Boot Firmware</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/openamp.html">OpenAMP</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/dfx.html">Dynamic Function eXchange</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/ipmi_eeprom.html">IPMI EEPROM Design Guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/yocto.html">Yocto Support</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/xen.html">XEN Support</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/freertos.html">FreeRTOS Support</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/kd240-docs.html">Kria KD240</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/kv260-docs.html">Kria KV260</a></li>
@@ -143,10 +141,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  <tr>
  <td align="center"><h1>Machine Vision Camera Tutorial</h1> </td>
  </tr>
-</table><div class="section" id="sensor-to-image-10gige-vision-pipeline">
-<h1>Sensor to Image 10GigE Vision Pipeline<a class="headerlink" href="#sensor-to-image-10gige-vision-pipeline" title="Permalink to this heading">¶</a></h1>
-<div class="section" id="overview-of-sensor-to-image-10gige-vision-pipeline-ips">
-<h2>Overview of Sensor to Image 10GigE Vision Pipeline IPs<a class="headerlink" href="#overview-of-sensor-to-image-10gige-vision-pipeline-ips" title="Permalink to this heading">¶</a></h2>
+</table><section id="sensor-to-image-10gige-vision-pipeline">
+<h1>Sensor to Image 10GigE Vision Pipeline<a class="headerlink" href="#sensor-to-image-10gige-vision-pipeline" title="Link to this heading">¶</a></h1>
+<section id="overview-of-sensor-to-image-10gige-vision-pipeline-ips">
+<h2>Overview of Sensor to Image 10GigE Vision Pipeline IPs<a class="headerlink" href="#overview-of-sensor-to-image-10gige-vision-pipeline-ips" title="Link to this heading">¶</a></h2>
 <p>The SLVS-EC Machine Vision application on AMD Kria™ KR260 board demonstrates the use of an AMD Zynq™ Ultrascale+™ device together with Framos SLVS-EC IP and Sensor to Image GigE Vision IP to build a machine vision application according to the GigE Vision standard.</p>
 <p>The design is developed using an AMD Vivado™ version 2022.1 with ubuntu running on and AMD Zynq™ MPSoC™ ARM processor subsystem.</p>
 <p>This is the block diagram of the SLVS-EC GigE Vision camera design:</p>
@@ -162,9 +160,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><p><strong>10Gigabit Ethernet MAC</strong>: This module is used in 10G systems for controlling access to the medium.</p></li>
 <li><p><strong>PHY interface core</strong>: This module converts XGMII interface of XGMAC core to high speed serial interface needed by physical interface. The component is part of the Vivado IP catalog.</p></li>
 </ul>
-</div>
-<div class="section" id="resource-utilization">
-<h2>Resource Utilization<a class="headerlink" href="#resource-utilization" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="resource-utilization">
+<h2>Resource Utilization<a class="headerlink" href="#resource-utilization" title="Link to this heading">¶</a></h2>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -218,21 +216,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td align="left">2</td>
 </tr>
 </tbody>
-</table></div>
-<div class="section" id="gige-vision-pipeline-hw-architecture">
-<h2>10GigE Vision Pipeline HW Architecture<a class="headerlink" href="#gige-vision-pipeline-hw-architecture" title="Permalink to this heading">¶</a></h2>
-<div class="section" id="introduction">
-<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h3>
+</table></section>
+<section id="gige-vision-pipeline-hw-architecture">
+<h2>10GigE Vision Pipeline HW Architecture<a class="headerlink" href="#gige-vision-pipeline-hw-architecture" title="Link to this heading">¶</a></h2>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h3>
 <p>This section describes the design implemented in Programmable Logic (PL). The following figure shows the top-level hardware architecture of the reference design.</p>
 <p><img alt="Top Level Hardware Architecture" src="../../../_images/Top_level_hardware_architecture.png" />
 At a high level, the design implements the following pipelines:</p>
-</div>
-<div class="section" id="single-sensor-slvs-ec-capture">
-<h3>Single Sensor SLVS-EC Capture<a class="headerlink" href="#single-sensor-slvs-ec-capture" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="single-sensor-slvs-ec-capture">
+<h3>Single Sensor SLVS-EC Capture<a class="headerlink" href="#single-sensor-slvs-ec-capture" title="Link to this heading">¶</a></h3>
 <p>A capture pipeline receives video frames from an external IMX547 Monochrome image sensor. This is done with the Framos SLVS-EC IP.</p>
-</div>
-<div class="section" id="gige-vision-protocol-pipeline">
-<h3>GigE Vision protocol pipeline<a class="headerlink" href="#gige-vision-protocol-pipeline" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="gige-vision-protocol-pipeline">
+<h3>GigE Vision protocol pipeline<a class="headerlink" href="#gige-vision-protocol-pipeline" title="Link to this heading">¶</a></h3>
 <p>The output of the Framos SLVS-EC IP is an AXI4 stream, which is forwarded to a special framebuffer IP from S2I. This IP buffers the data in external memory and forwards them in packets corresponding to the Ethernet packets size to the GigE packet composer(XGigE). The framebuffer also prepares the data to be sent in GenICam GenDC format, which allows to send a data container with different part, for example, raw image, preprocessed image, and metadata.</p>
 <p>The XGigE IP forms the network card of the system with offloading the generation of GigE Vision streaming packets to hardware. It also receives network traffic and forwards that interrupt driven to the PS.</p>
 <p>XGMAC and PCS/PMA IP implement the low-level medium access and bit encoding layer.</p>
@@ -240,15 +238,15 @@ At a high level, the design implements the following pipelines:</p>
 <p>To get the 10GigE IP license, <a class="reference external" href="https://www.euresys.com/en/About-us/Contact-us">contact Euresys</a>.</p>
 <p>Euresys Release note <a class="reference external" href="https://www.euresys.com/en/About-us/Blog-event/News/New-GigE-Vision-Viewer-for-AMD-Xilinx-Kria-KR260-R">here</a>.</p>
 <p>Download the packages from Euresys <a class="reference external" href="https://www.euresys.com/en/Support/Download-area">here</a>.</p>
-</div>
-</div>
-<div class="section" id="gige-vision-pipeline-sw-architecture">
-<h2>10GigE Vision pipeline SW Architecture<a class="headerlink" href="#gige-vision-pipeline-sw-architecture" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+<section id="gige-vision-pipeline-sw-architecture">
+<h2>10GigE Vision pipeline SW Architecture<a class="headerlink" href="#gige-vision-pipeline-sw-architecture" title="Link to this heading">¶</a></h2>
 <p>The image acquisition pipeline is completely offloaded to hardware; no software is involved in the streaming path. Software is only used for configuring the system, that means configuring the sensor and the GigE Vision IP. As Linux runs on the ARM system, a specific IMX547 driver is used, programming the sensor via PS I2C. A second driver (s2imac) integrates the XGigE core as ethX to the Linux system and binds standard Linux network services to that interface. A software application (gvrd) initializes the hardware and runs the GigE Vision control channel.</p>
 <p>According to the GigE vision specification, the device registers are described in the xml file. The host application requests this xml file from the device and creates a register tree. The registers on the device can then be read and written via the control channel. Hardware register accesses are implemented through calls to the s2imac network driver. Furthermore, the device software is responsible for configuring the GenICam GenDC descriptor.</p>
-</div>
-<div class="section" id="next-steps">
-<h2>Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="app_deployment.html"><span class="doc">Application Deployment</span></a></p></li>
 <li><p>Go back to the <a class="reference internal" href="sensor.html"><span class="doc">MV Camera Sensor</span></a></p></li>
@@ -261,8 +259,8 @@ You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
---><p align="center"><sup>Copyright&copy; 2023 Advanced Micro Devices, Inc.</sup></p></div>
-</div>
+--><p align="center"><sup>Copyright&copy; 2023 Advanced Micro Devices, Inc.</sup></p></section>
+</section>
 
 
            </div>
@@ -278,7 +276,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2024, Advanced Micro Devices, Inc.
-      <span class="lastupdated">Last updated on March 25, 2024.
+      <span class="lastupdated">Last updated on July 09, 2024.
       </span></p>
   </div>
 

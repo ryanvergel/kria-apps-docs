@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
 <!-- OneTrust Cookies Consent Notice start for xilinx.github.io -->
@@ -26,11 +27,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/documentation_options.js?v=2406f4f9"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -48,7 +47,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
             <a href="../../../index.html" class="icon icon-home"> Kria™ KR260
-            <img src="../../../_static/xilinx-header-logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2022.1
@@ -70,9 +68,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/bootfw.html">Boot Firmware</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/openamp.html">OpenAMP</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/dfx.html">Dynamic Function eXchange</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/ipmi_eeprom.html">IPMI EEPROM Design Guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/yocto.html">Yocto Support</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/xen.html">XEN Support</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/freertos.html">FreeRTOS Support</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/kd240-docs.html">Kria KD240</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/kv260-docs.html">Kria KV260</a></li>
@@ -142,13 +140,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  <tr>
  <td align="center"><h1>Machine Vision Camera Tutorial</h1> </td>
  </tr>
-</table><div class="section" id="software-architecture-of-the-accelerator">
-<h1>Software Architecture of the Accelerator<a class="headerlink" href="#software-architecture-of-the-accelerator" title="Permalink to this heading">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
+</table><section id="software-architecture-of-the-accelerator">
+<h1>Software Architecture of the Accelerator<a class="headerlink" href="#software-architecture-of-the-accelerator" title="Link to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>This document describes the software architecture of the MV-Defect-Detect accelerator application.</p>
-<div class="section" id="software-architecture">
-<h3>Software Architecture<a class="headerlink" href="#software-architecture" title="Permalink to this heading">¶</a></h3>
+<section id="software-architecture">
+<h3>Software Architecture<a class="headerlink" href="#software-architecture" title="Link to this heading">¶</a></h3>
 <p>In the MV-Defect-Detect application, the Computer Vision Starter Kit can take video inputs from a live or a file source. As shown in the following figure, the video inputs are in the Luma(Y) format, processed and displayed. AMD Vitis™ overlay includes Vitis Vision libraries that process the frames and detect defects in mangoes.</p>
 <p>In this reference design, the resolution on the input frames is 1920 x 1080, and the outputs are 1920x1080 on a 1080p display.</p>
 <p><img alt="../../../_images/defect-detection-process.png" src="../../../_images/defect-detection-process.png" /></p>
@@ -231,18 +229,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>SW</td>
 </tr>
 </tbody>
-</table></details></div>
-</div>
-<div class="section" id="v4l2src">
-<h2>v4l2src<a class="headerlink" href="#v4l2src" title="Permalink to this heading">¶</a></h2>
+</table></details></section>
+</section>
+<section id="v4l2src">
+<h2>v4l2src<a class="headerlink" href="#v4l2src" title="Link to this heading">¶</a></h2>
 <details>
  <summary><b>Click here to view details</b></summary><p>v4l2src is an open source plugin. The underlying GStreamer plugin uses the IMX547 sensor and the AP1302 ISP. The data flow is as follows:</p>
 <p><img alt="../../../_images/v4l2src-data-flow.png" src="../../../_images/v4l2src-data-flow.png" /></p>
-</details><div class="section" id="in-house-plugins">
-<h3>In-House Plugins<a class="headerlink" href="#in-house-plugins" title="Permalink to this heading">¶</a></h3>
+</details><section id="in-house-plugins">
+<h3>In-House Plugins<a class="headerlink" href="#in-house-plugins" title="Link to this heading">¶</a></h3>
 <p>The following are the in-house plugins:</p>
-<div class="section" id="pre-process">
-<h4>Pre-process<a class="headerlink" href="#pre-process" title="Permalink to this heading">¶</a></h4>
+<section id="pre-process">
+<h4>Pre-process<a class="headerlink" href="#pre-process" title="Link to this heading">¶</a></h4>
 <details>
  <summary><b>Click here to view details</b></summary><p>The pre-process pipeline is as follows:</p>
 <p><img alt="../../../_images/preprocessing_pipeline.png" src="../../../_images/preprocessing_pipeline.png" /></p>
@@ -271,9 +269,9 @@ then calculates the optimum threshold separating the two classes.</p>
 <p>The following figure depicts the Threshold + Median plugin data flow.</p>
 <p><img alt="../../../_images/threshold-median-plugin-dataflow.png" src="../../../_images/threshold-median-plugin-dataflow.png" /></p>
 <p>Threshold and Median Blur kernels are connected together using AXI Stream interface.</p>
-</details></div>
-<div class="section" id="cca">
-<h4>CCA<a class="headerlink" href="#cca" title="Permalink to this heading">¶</a></h4>
+</details></section>
+<section id="cca">
+<h4>CCA<a class="headerlink" href="#cca" title="Link to this heading">¶</a></h4>
 <details>
  <summary><b>Click here to view details</b></summary><p>The implemented Connected Component Analysis (CCA), is a custom solution to find the defective pixels in the problem object. This algorithm considers few assumptions that the background must be easily separable from the foreground object.</p>
 <p>The custom CCA effectively analyses the components that are connected to the background pixels and removes the background from the object and defective pixels. The aim is to send the following output information from the function:</p>
@@ -286,9 +284,9 @@ then calculates the optimum threshold separating the two classes.</p>
 <p><img alt="../../../_images/cca-plugin-sw-stack.png" src="../../../_images/cca-plugin-sw-stack.png" /></p>
 <p>The following figure depicts the CCA plugin data flow.</p>
 <p><img alt="../../../_images/cca-plugin-dataflow.png" src="../../../_images/cca-plugin-dataflow.png" /></p>
-</details></div>
-<div class="section" id="defect-decision">
-<h4>Defect Decision<a class="headerlink" href="#defect-decision" title="Permalink to this heading">¶</a></h4>
+</details></section>
+<section id="defect-decision">
+<h4>Defect Decision<a class="headerlink" href="#defect-decision" title="Link to this heading">¶</a></h4>
 <details>
  <summary><b>Click here to view details</b></summary><p>The output of the CCA plugin is fed into the Defect Decision block, which determines the defect density and decides the quality of the mango. The block performs the following main operations:</p>
 <ul class="simple">
@@ -300,11 +298,11 @@ then calculates the optimum threshold separating the two classes.</p>
 <p><img alt="../../../_images/defect-decision-plugin-sw-stack.png" src="../../../_images/defect-decision-plugin-sw-stack.png" /></p>
 <p>The following figure depicts the Defect Decision plugin data flow.</p>
 <p><img alt="../../../_images/defect-decision-plugin-dataflow.png" src="../../../_images/defect-decision-plugin-dataflow.png" /></p>
-</details></div>
-</div>
-</div>
-<div class="section" id="configuration-files">
-<h2>Configuration Files<a class="headerlink" href="#configuration-files" title="Permalink to this heading">¶</a></h2>
+</details></section>
+</section>
+</section>
+<section id="configuration-files">
+<h2>Configuration Files<a class="headerlink" href="#configuration-files" title="Link to this heading">¶</a></h2>
 <details>
  <summary><b>Click here to view details</b></summary><p>The <strong>mv-defect-detect</strong> application uses the following configuration files.</p>
 <ul>
@@ -448,9 +446,9 @@ then calculates the optimum threshold separating the two classes.</p>
 <span class="n">For</span> <span class="n">more</span> <span class="n">information</span> <span class="p">[</span><span class="n">see</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">opencv</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mf">3.4</span><span class="o">/</span><span class="n">d0</span><span class="o">/</span><span class="n">de1</span><span class="o">/</span><span class="n">group__core</span><span class="o">.</span><span class="n">html</span><span class="c1">#ga0f9314ea6e35f99bb23f29567fc16e11).</span>
 </pre></div>
 </div>
-</details></div>
-<div class="section" id="next-steps">
-<h2>Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this heading">¶</a></h2>
+</details></section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="hw_arch_accel_dd.html"><span class="doc">Hardware Accelerator</span></a></p></li>
 <li><p>Go back to the <a class="reference internal" href="sw_arch_platform_dd.html"><span class="doc">System Architecture of the Platform</span></a></p></li>
@@ -465,8 +463,8 @@ You may obtain a copy of the License at
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
---><p align="center">Copyright&copy; 2023 Advanced Micro Devices, Inc.</p></div>
-</div>
+--><p align="center">Copyright&copy; 2023 Advanced Micro Devices, Inc.</p></section>
+</section>
 
 
            </div>
@@ -482,7 +480,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2024, Advanced Micro Devices, Inc.
-      <span class="lastupdated">Last updated on March 25, 2024.
+      <span class="lastupdated">Last updated on July 09, 2024.
       </span></p>
   </div>
 
