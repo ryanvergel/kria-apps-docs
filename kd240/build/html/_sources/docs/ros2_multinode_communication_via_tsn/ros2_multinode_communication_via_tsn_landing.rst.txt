@@ -44,6 +44,7 @@ Tutorials
    Linux Boot <../kria_starterkit_linux_boot>
    Building the Design Components <../building_the_design>
    Building the Hardware Design Using Vivado <../build_vivado_design>
+   Creating a Vitis Platform <../build_vitis_platform>
    Generate Custom Firmware <../generating_custom_firmware>
    Software Build Instructions <src/sw_build_instructions>
 
@@ -68,9 +69,9 @@ Repository
 *******************************
 
 .. toctree::
-  :maxdepth: 1
+   :maxdepth: 1
   
-  Software Repository <https://github.com/Xilinx/ros-tsn-pubsub>
+   Software Repository <https://github.com/Xilinx/ros-tsn-pubsub>
 
 
 Xilinx Support

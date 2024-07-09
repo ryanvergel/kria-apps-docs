@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
 <!-- OneTrust Cookies Consent Notice start for xilinx.github.io -->
@@ -26,11 +27,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/documentation_options.js?v=2406f4f9"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -48,7 +47,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
             <a href="../../../index.html" class="icon icon-home"> Kria™ KR260
-            <img src="../../../_static/xilinx-header-logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2022.1
@@ -70,9 +68,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/bootfw.html">Boot Firmware</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/openamp.html">OpenAMP</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/dfx.html">Dynamic Function eXchange</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/ipmi_eeprom.html">IPMI EEPROM Design Guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/yocto.html">Yocto Support</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/xen.html">XEN Support</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/freertos.html">FreeRTOS Support</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/kd240-docs.html">Kria KD240</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/kria-apps-docs/kv260-docs.html">Kria KV260</a></li>
@@ -143,16 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  <tr>
  <td align="center"><h1>Setting up the Board and Application Deployment</h1> </td>
  </tr>
-</table><div class="section" id="board-setup-and-application-deployment">
-<h1>Board Setup and Application Deployment<a class="headerlink" href="#board-setup-and-application-deployment" title="Permalink to this heading">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
+</table><section id="board-setup-and-application-deployment">
+<h1>Board Setup and Application Deployment<a class="headerlink" href="#board-setup-and-application-deployment" title="Link to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>This document shows the steps to setup the board and run the GPS_1588_PTP application.</p>
-</div>
-<div class="section" id="pre-requisite">
-<h2>Pre-requisite<a class="headerlink" href="#pre-requisite" title="Permalink to this heading">¶</a></h2>
-<div class="section" id="hardware-requirements">
-<h3>Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="pre-requisite">
+<h2>Pre-requisite<a class="headerlink" href="#pre-requisite" title="Link to this heading">¶</a></h2>
+<section id="hardware-requirements">
+<h3>Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>KR260 Robotics Starter Kit -2 Nos</p></li>
 <li><p>KR260 Power Supply &amp; Adapter (Included with KR260 Robotics Starter Kit)</p></li>
@@ -165,10 +163,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><p>3V 12.5 mm coin cell battery (Optional, Sold Separately <a class="reference external" href="https://www.amazon.com/Energizer-CR2032-Batteries-Lithium-Battery/dp/B0002RID4G/ref=sr_1_1?crid=16OVOB5DI97YX&amp;keywords=3v+1.2+mm+coin+battery&amp;qid=1683866588&amp;sprefix=3v+1.2+mmcoin+battery%2Caps%2C289&amp;sr=8-1">here</a>)</p></li>
 <li><p>Monitor with DP port, keyboard and mouse (Optional - for running application using GUI)</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="hardware-setup-with-2-kr260-boards">
-<h2>Hardware setup with 2 KR260 boards<a class="headerlink" href="#hardware-setup-with-2-kr260-boards" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+<section id="hardware-setup-with-2-kr260-boards">
+<h2>Hardware setup with 2 KR260 boards<a class="headerlink" href="#hardware-setup-with-2-kr260-boards" title="Link to this heading">¶</a></h2>
 <p>The setup used for deploying the application is shown below:</p>
 <ol class="simple">
 <li><p>Connect the two boards to the same ethernet network via J10C RJ45 PS GEM1 port. Assume one of the KR260 as Master and other as Slave.</p></li>
@@ -181,46 +179,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><p>Power on both the boards and follow the next steps in “Booting up Linux”</p></li>
 </ol>
 <p><img alt="2board" src="../../../_images/Precision_time_hardware_setup.jpg" /></p>
-</div>
-<div class="section" id="booting-up-linux">
-<h2>Booting up Linux<a class="headerlink" href="#booting-up-linux" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="booting-up-linux">
+<h2>Booting up Linux<a class="headerlink" href="#booting-up-linux" title="Link to this heading">¶</a></h2>
 <p>Go through <a class="reference internal" href="../../kria_starterkit_linux_boot.html"><span class="doc">Booting Kria Starter Kit Linux</span></a> to complete minimum setup required to boot Linux on both Master and Slave KR260 boards before continuing with instructions in this page.</p>
 <blockquote>
 <div><p><strong>Note:</strong> Make sure you are using the latest KR260 Starter Kit Boot firmware (2022.2_update 1 or later), otherwise this application may not work.</p>
 </div></blockquote>
-</div>
-<div class="section" id="downloading-and-loading-application-firmware-on-master">
-<h2>Downloading and Loading Application Firmware on Master<a class="headerlink" href="#downloading-and-loading-application-firmware-on-master" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="downloading-and-loading-application-firmware-on-master">
+<h2>Downloading and Loading Application Firmware on Master<a class="headerlink" href="#downloading-and-loading-application-firmware-on-master" title="Link to this heading">¶</a></h2>
 <p>Get the latest GPS_1588_PTP firmware package:</p>
 <ol>
 <li><p>Search package feed for packages compatible with KR260</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt search xlnx-firmware-kr260
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>search<span class="w"> </span>xlnx-firmware-kr260
 </pre></div>
 </div>
 <p>An example output is show below</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ubuntu@kria:~$ sudo apt search xlnx-firmware-kr260
-<span class="o">[</span>sudo<span class="o">]</span> password <span class="k">for</span> ubuntu:
-Sorting... Done
-Full Text Search... Done
-xlnx-firmware-kr260-bist/jammy <span class="m">0</span>.9~beta1-0xlnx1 arm64
-  FPGA firmware <span class="k">for</span> Xilinx boards - kr260 bist application
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ubuntu@kria:~$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>search<span class="w"> </span>xlnx-firmware-kr260
+<span class="o">[</span>sudo<span class="o">]</span><span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>ubuntu:
+Sorting...<span class="w"> </span>Done
+Full<span class="w"> </span>Text<span class="w"> </span>Search...<span class="w"> </span>Done
+xlnx-firmware-kr260-bist/jammy<span class="w"> </span><span class="m">0</span>.9~beta1-0xlnx1<span class="w"> </span>arm64
+<span class="w">  </span>FPGA<span class="w"> </span>firmware<span class="w"> </span><span class="k">for</span><span class="w"> </span>Xilinx<span class="w"> </span>boards<span class="w"> </span>-<span class="w"> </span>kr260<span class="w"> </span>bist<span class="w"> </span>application
 
-xlnx-firmware-kr260-gps-1588-ptp/jammy,now <span class="m">0</span>.9~beta1-0xlnx1 arm64 
-  FPGA firmware <span class="k">for</span> Xilinx boards - kr260 gps-1588-ptp application
+xlnx-firmware-kr260-gps-1588-ptp/jammy,now<span class="w"> </span><span class="m">0</span>.9~beta1-0xlnx1<span class="w"> </span>arm64<span class="w"> </span>
+<span class="w">  </span>FPGA<span class="w"> </span>firmware<span class="w"> </span><span class="k">for</span><span class="w"> </span>Xilinx<span class="w"> </span>boards<span class="w"> </span>-<span class="w"> </span>kr260<span class="w"> </span>gps-1588-ptp<span class="w"> </span>application
 
-xlnx-firmware-kr260-mv-camera/jammy <span class="m">0</span>.9~beta1-0xlnx1 arm64
-  FPGA firmware <span class="k">for</span> Xilinx boards - kr260 mv-camera application
+xlnx-firmware-kr260-mv-camera/jammy<span class="w"> </span><span class="m">0</span>.9~beta1-0xlnx1<span class="w"> </span>arm64
+<span class="w">  </span>FPGA<span class="w"> </span>firmware<span class="w"> </span><span class="k">for</span><span class="w"> </span>Xilinx<span class="w"> </span>boards<span class="w"> </span>-<span class="w"> </span>kr260<span class="w"> </span>mv-camera<span class="w"> </span>application
 
-xlnx-firmware-kr260-perception/jammy <span class="m">0</span>.9~beta1-0xlnx1 arm64
-  FPGA firmware <span class="k">for</span> Xilinx boards - kr260 perception application
+xlnx-firmware-kr260-perception/jammy<span class="w"> </span><span class="m">0</span>.9~beta1-0xlnx1<span class="w"> </span>arm64
+<span class="w">  </span>FPGA<span class="w"> </span>firmware<span class="w"> </span><span class="k">for</span><span class="w"> </span>Xilinx<span class="w"> </span>boards<span class="w"> </span>-<span class="w"> </span>kr260<span class="w"> </span>perception<span class="w"> </span>application
 
-xlnx-firmware-kr260-tsn-rs485pmod/jammy <span class="m">0</span>.9~beta1-0xlnx1 arm64
-  FPGA firmware <span class="k">for</span> Xilinx boards - kr260 tsn-rs485pmod application
+xlnx-firmware-kr260-tsn-rs485pmod/jammy<span class="w"> </span><span class="m">0</span>.9~beta1-0xlnx1<span class="w"> </span>arm64
+<span class="w">  </span>FPGA<span class="w"> </span>firmware<span class="w"> </span><span class="k">for</span><span class="w"> </span>Xilinx<span class="w"> </span>boards<span class="w"> </span>-<span class="w"> </span>kr260<span class="w"> </span>tsn-rs485pmod<span class="w"> </span>application
 </pre></div>
 </div>
 </li>
 <li><p>Install firmware binaries</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install xlnx-firmware-kr260-gps-1588-ptp
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>xlnx-firmware-kr260-gps-1588-ptp
 </pre></div>
 </div>
 </li>
@@ -228,36 +226,36 @@ xlnx-firmware-kr260-tsn-rs485pmod/jammy <span class="m">0</span>.9~beta1-0xlnx1 
 <p>The firmware consist of bitstream, device tree overlay (dtbo) file. The firmware is loaded dynamically on user request once Linux is fully booted. The xmutil utility can be used for that purpose.</p>
 <ul>
 <li><p>Show the list and status of available acceleration platforms :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo xmutil listapps
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>xmutil<span class="w"> </span>listapps
 </pre></div>
 </div>
 </li>
 <li><p>load <code class="docutils literal notranslate"><span class="pre">kr260-gps-1588-ptp</span></code> firmware</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo xmutil unloadapp   <span class="c1">## Unload existing firmware</span>
-sudo xmutil loadapp kr260-gps-1588-ptp  <span class="c1">## load kr260-gps-1588-ptp</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>xmutil<span class="w"> </span>unloadapp<span class="w">   </span><span class="c1">## Unload existing firmware</span>
+sudo<span class="w"> </span>xmutil<span class="w"> </span>loadapp<span class="w"> </span>kr260-gps-1588-ptp<span class="w">  </span><span class="c1">## load kr260-gps-1588-ptp</span>
 </pre></div>
 </div>
 </li>
 </ul>
 </li>
 </ol>
-</div>
-<div class="section" id="installing-application">
-<h2>Installing application<a class="headerlink" href="#installing-application" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="installing-application">
+<h2>Installing application<a class="headerlink" href="#installing-application" title="Link to this heading">¶</a></h2>
 <ul>
 <li><p>On Master</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> <span class="c1"># Remove incompatible packages</span>
- sudo apt remove systemd-timesyncd
- <span class="c1"># Install gps-1588-ptp applications below</span>
- <span class="c1"># Confirm with &quot;Y&quot; when prompted to install new or updated packages.</span>
- sudo apt install gps-1588-ptp-master
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="c1"># Remove incompatible packages</span>
+<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>systemd-timesyncd
+<span class="w"> </span><span class="c1"># Install gps-1588-ptp applications below</span>
+<span class="w"> </span><span class="c1"># Confirm with &quot;Y&quot; when prompted to install new or updated packages.</span>
+<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gps-1588-ptp-master
 </pre></div>
 </div>
 </li>
 <li><p>On Slave</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> <span class="c1"># Install gps-1588-ptp applications below</span>
- <span class="c1"># Confirm with &quot;Y&quot; when prompted to install new or updated packages.</span>
- sudo apt install gps-1588-ptp-slave
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="c1"># Install gps-1588-ptp applications below</span>
+<span class="w"> </span><span class="c1"># Confirm with &quot;Y&quot; when prompted to install new or updated packages.</span>
+<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gps-1588-ptp-slave
 </pre></div>
 </div>
 </li>
@@ -265,12 +263,12 @@ sudo xmutil loadapp kr260-gps-1588-ptp  <span class="c1">## load kr260-gps-1588-
 <blockquote>
 <div><p>Note: <code class="docutils literal notranslate"><span class="pre">linuxptp</span></code>, <code class="docutils literal notranslate"><span class="pre">gpsd-tools</span></code>,<code class="docutils literal notranslate"><span class="pre">gpsd-clients</span></code>,<code class="docutils literal notranslate"><span class="pre">linuxptp</span></code>,<code class="docutils literal notranslate"><span class="pre">chrony</span></code>,<code class="docutils literal notranslate"><span class="pre">python3-tk</span></code>, <code class="docutils literal notranslate"><span class="pre">ppstools</span></code> are dependencies to GPS_1588_PTP applications that are installed automatically with above commands.</p>
 </div></blockquote>
-<div class="section" id="set-path-to-application-bin">
-<h3>Set PATH to application bin<a class="headerlink" href="#set-path-to-application-bin" title="Permalink to this heading">¶</a></h3>
+<section id="set-path-to-application-bin">
+<h3>Set PATH to application bin<a class="headerlink" href="#set-path-to-application-bin" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>Add following path in environment variable for Xilinx demo application on both Mater and Slave. This application using linux utilities which are only accessible from sudo user. Its recommended to switch to root user with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">-i</span></code> before proceeding to below commands</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> sudo -i
- <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/opt/xilinx/kr260-gps-1588-ptp/bin/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>sudo<span class="w"> </span>-i
+<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/opt/xilinx/kr260-gps-1588-ptp/bin/
 </pre></div>
 </div>
 </li>
@@ -278,34 +276,34 @@ sudo xmutil loadapp kr260-gps-1588-ptp  <span class="c1">## load kr260-gps-1588-
 <blockquote>
 <div><p><strong>Note:</strong> consider adding the above commands to ~/.bashrc to avoid executing on every new shell created.</p>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="verify-gps-pulse-on-master">
-<h2>Verify GPS pulse on Master<a class="headerlink" href="#verify-gps-pulse-on-master" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+<section id="verify-gps-pulse-on-master">
+<h2>Verify GPS pulse on Master<a class="headerlink" href="#verify-gps-pulse-on-master" title="Link to this heading">¶</a></h2>
 <ol>
 <li><p>Run the below command to get the pps node corresponding to the GPS module</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo dmesg <span class="p">|</span> grep axi:pps_axi_gpio_0 <span class="p">|</span> tail -1
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dmesg<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>axi:pps_axi_gpio_0<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1
 </pre></div>
 </div>
 <p>The command output is as follows. From this output, we have the pps2 as the PPS source for GPS module</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ubuntu@kria:~$ sudo dmesg <span class="p">|</span>  grep axi:pps_axi_gpio_0 <span class="p">|</span> tail -1
-<span class="o">[</span><span class="m">67280</span>.282986<span class="o">]</span> pps pps2: new PPS <span class="nb">source</span> axi:pps_axi_gpio_0.-1
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ubuntu@kria:~$<span class="w"> </span>sudo<span class="w"> </span>dmesg<span class="w"> </span><span class="p">|</span><span class="w">  </span>grep<span class="w"> </span>axi:pps_axi_gpio_0<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1
+<span class="o">[</span><span class="m">67280</span>.282986<span class="o">]</span><span class="w"> </span>pps<span class="w"> </span>pps2:<span class="w"> </span>new<span class="w"> </span>PPS<span class="w"> </span><span class="nb">source</span><span class="w"> </span>axi:pps_axi_gpio_0.-1
 </pre></div>
 </div>
 </li>
 <li><p>Run the below command to verify if the GPS receiver is locked</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ppstest /dev/pps2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>ppstest<span class="w"> </span>/dev/pps2
 </pre></div>
 </div>
 <p>when the GPS Signal is acquired, you receive one PPS pulse every second and the terminal is as shown below</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ubuntu@kria:~$ sudo ppstest /dev/pps2
-trying PPS <span class="nb">source</span> <span class="s2">&quot;/dev/pps2&quot;</span>
-found PPS <span class="nb">source</span> <span class="s2">&quot;/dev/pps2&quot;</span>
-ok, found <span class="m">1</span> source<span class="o">(</span>s<span class="o">)</span>, now start fetching data...
-<span class="nb">source</span> <span class="m">0</span> - assert <span class="m">1683625047</span>.055531540, sequence: <span class="m">115</span> - clear <span class="m">0</span>.000000000, sequence: <span class="m">0</span>
-<span class="nb">source</span> <span class="m">0</span> - assert <span class="m">1683625048</span>.055512261, sequence: <span class="m">116</span> - clear <span class="m">0</span>.000000000, sequence: <span class="m">0</span>
-<span class="nb">source</span> <span class="m">0</span> - assert <span class="m">1683625049</span>.055506572, sequence: <span class="m">117</span> - clear <span class="m">0</span>.000000000, sequence: <span class="m">0</span>
-<span class="nb">source</span> <span class="m">0</span> - assert <span class="m">1683625050</span>.055499274, sequence: <span class="m">118</span> - clear <span class="m">0</span>.000000000, sequence: <span class="m">0</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ubuntu@kria:~$<span class="w"> </span>sudo<span class="w"> </span>ppstest<span class="w"> </span>/dev/pps2
+trying<span class="w"> </span>PPS<span class="w"> </span><span class="nb">source</span><span class="w"> </span><span class="s2">&quot;/dev/pps2&quot;</span>
+found<span class="w"> </span>PPS<span class="w"> </span><span class="nb">source</span><span class="w"> </span><span class="s2">&quot;/dev/pps2&quot;</span>
+ok,<span class="w"> </span>found<span class="w"> </span><span class="m">1</span><span class="w"> </span>source<span class="o">(</span>s<span class="o">)</span>,<span class="w"> </span>now<span class="w"> </span>start<span class="w"> </span>fetching<span class="w"> </span>data...
+<span class="nb">source</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>-<span class="w"> </span>assert<span class="w"> </span><span class="m">1683625047</span>.055531540,<span class="w"> </span>sequence:<span class="w"> </span><span class="m">115</span><span class="w"> </span>-<span class="w"> </span>clear<span class="w"> </span><span class="m">0</span>.000000000,<span class="w"> </span>sequence:<span class="w"> </span><span class="m">0</span>
+<span class="nb">source</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>-<span class="w"> </span>assert<span class="w"> </span><span class="m">1683625048</span>.055512261,<span class="w"> </span>sequence:<span class="w"> </span><span class="m">116</span><span class="w"> </span>-<span class="w"> </span>clear<span class="w"> </span><span class="m">0</span>.000000000,<span class="w"> </span>sequence:<span class="w"> </span><span class="m">0</span>
+<span class="nb">source</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>-<span class="w"> </span>assert<span class="w"> </span><span class="m">1683625049</span>.055506572,<span class="w"> </span>sequence:<span class="w"> </span><span class="m">117</span><span class="w"> </span>-<span class="w"> </span>clear<span class="w"> </span><span class="m">0</span>.000000000,<span class="w"> </span>sequence:<span class="w"> </span><span class="m">0</span>
+<span class="nb">source</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>-<span class="w"> </span>assert<span class="w"> </span><span class="m">1683625050</span>.055499274,<span class="w"> </span>sequence:<span class="w"> </span><span class="m">118</span><span class="w"> </span>-<span class="w"> </span>clear<span class="w"> </span><span class="m">0</span>.000000000,<span class="w"> </span>sequence:<span class="w"> </span><span class="m">0</span>
 </pre></div>
 </div>
 <blockquote>
@@ -316,31 +314,31 @@ ok, found <span class="m">1</span> source<span class="o">(</span>s<span class="o
 </div></blockquote>
 </li>
 </ol>
-</div>
-<div class="section" id="steps-to-configure-linux-utilities-to-use-gps-device-as-clock-source-on-master">
-<h2>Steps to configure linux utilities to use GPS device as clock source on Master<a class="headerlink" href="#steps-to-configure-linux-utilities-to-use-gps-device-as-clock-source-on-master" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="steps-to-configure-linux-utilities-to-use-gps-device-as-clock-source-on-master">
+<h2>Steps to configure linux utilities to use GPS device as clock source on Master<a class="headerlink" href="#steps-to-configure-linux-utilities-to-use-gps-device-as-clock-source-on-master" title="Link to this heading">¶</a></h2>
 <ol>
 <li><p>Update the gpsd configuration files with the below content</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo cp /etc/default/gpsd /etc/default/gpsd.bak
-sudo sh /opt/xilinx/kr260-gps-1588-ptp/configs/gpsd.sh 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/default/gpsd<span class="w"> </span>/etc/default/gpsd.bak
+sudo<span class="w"> </span>sh<span class="w"> </span>/opt/xilinx/kr260-gps-1588-ptp/configs/gpsd.sh<span class="w"> </span>
 </pre></div>
 </div>
 </li>
 <li><p>Update the configuration for gpsd services</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo cp /lib/systemd/system/gpsd.service /lib/systemd/system/gpsd.service.bak
-sudo cp /opt/xilinx/kr260-gps-1588-ptp/configs/gpsd.service /lib/systemd/system/gpsd.service
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>cp<span class="w"> </span>/lib/systemd/system/gpsd.service<span class="w"> </span>/lib/systemd/system/gpsd.service.bak
+sudo<span class="w"> </span>cp<span class="w"> </span>/opt/xilinx/kr260-gps-1588-ptp/configs/gpsd.service<span class="w"> </span>/lib/systemd/system/gpsd.service
 </pre></div>
 </div>
 </li>
 <li><p>Update the gpsd.socket file</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo cp /lib/systemd/system/gpsd.socket /lib/systemd/system/gpsd.socket.bak
-sudo cp /opt/xilinx/kr260-gps-1588-ptp/configs/gpsd.socket /lib/systemd/system/gpsd.socket
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>cp<span class="w"> </span>/lib/systemd/system/gpsd.socket<span class="w"> </span>/lib/systemd/system/gpsd.socket.bak
+sudo<span class="w"> </span>cp<span class="w"> </span>/opt/xilinx/kr260-gps-1588-ptp/configs/gpsd.socket<span class="w"> </span>/lib/systemd/system/gpsd.socket
 </pre></div>
 </div>
 </li>
 <li><p>Update the chrony configuration</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo cp /etc/chrony/chrony.conf /etc/chrony/chrony.conf.bak
-sudo sh /opt/xilinx/kr260-gps-1588-ptp/configs/chrony.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/chrony/chrony.conf<span class="w"> </span>/etc/chrony/chrony.conf.bak
+sudo<span class="w"> </span>sh<span class="w"> </span>/opt/xilinx/kr260-gps-1588-ptp/configs/chrony.sh
 </pre></div>
 </div>
 <blockquote>
@@ -348,9 +346,9 @@ sudo sh /opt/xilinx/kr260-gps-1588-ptp/configs/chrony.sh
 </div></blockquote>
 </li>
 </ol>
-</div>
-<div class="section" id="run-out-of-box-applications">
-<h2>Run Out Of Box Applications<a class="headerlink" href="#run-out-of-box-applications" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="run-out-of-box-applications">
+<h2>Run Out Of Box Applications<a class="headerlink" href="#run-out-of-box-applications" title="Link to this heading">¶</a></h2>
 <p>The GPS_1588_PTP application will Synchronize the linux platform System Time with GPS Time and distribute the system time to an another KR260 board using linux PTP tools. The application uses gpsd, chrony daemons and linux ptp utilities.</p>
 <p><img alt="osc" src="../../../_images/2boards_setup_new.jpg" /></p>
 <p>The application provides 3 ways to interact.</p>
@@ -362,8 +360,8 @@ sudo sh /opt/xilinx/kr260-gps-1588-ptp/configs/chrony.sh
 <blockquote>
 <div><p><strong>Note</strong>: Ensure to load the GPS_1588_PTP firmware on Master (refer to <a class="reference external" href="#downloading-and-loading-application-firmware-on-master">step-3</a> from ‘Downloading and Loading Application Firmware on Master’) using <code class="docutils literal notranslate"><span class="pre">xmutil</span> <span class="pre">loadapp</span> <span class="pre">kr260-gps-1588-ptp</span></code> before testing example application. If the firmware is already loaded, ignore this step and proceed.</p>
 </div></blockquote>
-<div class="section" id="via-jupyter-notebook">
-<h3>Via Jupyter Notebook<a class="headerlink" href="#via-jupyter-notebook" title="Permalink to this heading">¶</a></h3>
+<section id="via-jupyter-notebook">
+<h3>Via Jupyter Notebook<a class="headerlink" href="#via-jupyter-notebook" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>User need to run following command to install the package shipped notebooks which reside in <code class="docutils literal notranslate"><span class="pre">/opt/xilinx/kr260-gps-1588-ptp/share/notebooks</span></code> to the folder <code class="docutils literal notranslate"><span class="pre">/home/&lt;user&gt;/notebooks</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">gps-1588-ptp-install.py</span></code></p>
@@ -382,67 +380,67 @@ sudo sh /opt/xilinx/kr260-gps-1588-ptp/configs/chrony.sh
 </div>
 <ul>
 <li><p>On Master, run the below command to launch the notebook. Open the URL in the browser and open master.ipynb file. Follow the steps in the notebook to sync the master with GPS time</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo jupyter notebook --allow-root --ip<span class="o">=</span>&lt;eth0-ip-address&gt; <span class="p">&amp;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>jupyter<span class="w"> </span>notebook<span class="w"> </span>--allow-root<span class="w"> </span>--ip<span class="o">=</span>&lt;eth0-ip-address&gt;<span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
 </div>
 </li>
 <li><p>On Slave, run the below command to launch the notebook. Open the URL in the browser and open slave.ipynb file. Follow the steps in the notebook to sync the slave with master</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo jupyter notebook --allow-root --ip<span class="o">=</span>&lt;eth0-ip-address&gt; <span class="p">&amp;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>jupyter<span class="w"> </span>notebook<span class="w"> </span>--allow-root<span class="w"> </span>--ip<span class="o">=</span>&lt;eth0-ip-address&gt;<span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
 </div>
 </li>
 </ul>
-</div>
-<div class="section" id="via-terminal">
-<h3>Via Terminal<a class="headerlink" href="#via-terminal" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="via-terminal">
+<h3>Via Terminal<a class="headerlink" href="#via-terminal" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>On Master, run the below command to sync the master with GPS time</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo gps-1588-ptp-master
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>gps-1588-ptp-master
 </pre></div>
 </div>
 <ul>
 <li><p>Initially the Application prints the current system time on terminal using <code class="docutils literal notranslate"><span class="pre">timedatectl</span></code> as shown below. It shows the sync status as no.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>                   Local time: Mon <span class="m">2023</span>-03-20 <span class="m">14</span>:36:08 UTC
-               Universal time: Mon <span class="m">2023</span>-03-20 <span class="m">14</span>:36:08 UTC
-                     RTC time: Thu <span class="m">1970</span>-01-01 <span class="m">00</span>:04:17
-                    Time zone: Etc/UTC <span class="o">(</span>UTC, +0000<span class="o">)</span>
-    System clock synchronized: no
-                  NTP service: inactive
-              RTC <span class="k">in</span> <span class="nb">local</span> TZ: no
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">                   </span>Local<span class="w"> </span>time:<span class="w"> </span>Mon<span class="w"> </span><span class="m">2023</span>-03-20<span class="w"> </span><span class="m">14</span>:36:08<span class="w"> </span>UTC
+<span class="w">               </span>Universal<span class="w"> </span>time:<span class="w"> </span>Mon<span class="w"> </span><span class="m">2023</span>-03-20<span class="w"> </span><span class="m">14</span>:36:08<span class="w"> </span>UTC
+<span class="w">                     </span>RTC<span class="w"> </span>time:<span class="w"> </span>Thu<span class="w"> </span><span class="m">1970</span>-01-01<span class="w"> </span><span class="m">00</span>:04:17
+<span class="w">                    </span>Time<span class="w"> </span>zone:<span class="w"> </span>Etc/UTC<span class="w"> </span><span class="o">(</span>UTC,<span class="w"> </span>+0000<span class="o">)</span>
+<span class="w">    </span>System<span class="w"> </span>clock<span class="w"> </span>synchronized:<span class="w"> </span>no
+<span class="w">                  </span>NTP<span class="w"> </span>service:<span class="w"> </span>inactive
+<span class="w">              </span>RTC<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span>TZ:<span class="w"> </span>no
 </pre></div>
 </div>
 </li>
 <li><p>Later it triggers the GPSD and chrony services to synchronize the system time with the GPS time. The application prints the updated chrony sources which can be verified from the output.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>                              MS Name/IP address         Stratum Poll Reach LastRx Last <span class="nv">sample</span>
-                <span class="o">===============================================================================</span>
-                <span class="c1">#* GPS                           0   4   177    17  +1922ns[  +15us] +/- 5484ns</span>
-                <span class="c1">#- NMEA                          0   4   177    19    -26ms[  -26ms] +/-  101ms</span>
-                ^? prod-ntp-4.ntp1.ps5.cano&gt;     <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
-                ^? prod-ntp-5.ntp4.ps5.cano&gt;     <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
-                ^? prod-ntp-3.ntp1.ps5.cano&gt;     <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
-                ^? pugot.canonical.com           <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
-                ^? alphyn.canonical.com          <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
-                ^? <span class="m">157</span>.245.102.2                 <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
-                ^? ntp-mumbai.gombadi.com        <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
-                ^? <span class="m">139</span>.59.55.93                  <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
-                ^? <span class="m">144</span>.24.146.96                 <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
-                ^? ntp6.mum-in.hosts.301-mo&gt;     <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
-                ^? ntp5.mum-in.hosts.301-mo&gt;     <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
-                ^? <span class="m">165</span>.22.211.200                <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
-                ^? ec2-13-126-27-131.ap-sou&gt;     <span class="m">0</span>   <span class="m">7</span>     <span class="m">0</span>     -     +0ns<span class="o">[</span>   +0ns<span class="o">]</span> +/-    0ns
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">                              </span>MS<span class="w"> </span>Name/IP<span class="w"> </span>address<span class="w">         </span>Stratum<span class="w"> </span>Poll<span class="w"> </span>Reach<span class="w"> </span>LastRx<span class="w"> </span>Last<span class="w"> </span><span class="nv">sample</span>
+<span class="w">                </span><span class="o">===============================================================================</span>
+<span class="w">                </span><span class="c1">#* GPS                           0   4   177    17  +1922ns[  +15us] +/- 5484ns</span>
+<span class="w">                </span><span class="c1">#- NMEA                          0   4   177    19    -26ms[  -26ms] +/-  101ms</span>
+<span class="w">                </span>^?<span class="w"> </span>prod-ntp-4.ntp1.ps5.cano&gt;<span class="w">     </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
+<span class="w">                </span>^?<span class="w"> </span>prod-ntp-5.ntp4.ps5.cano&gt;<span class="w">     </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
+<span class="w">                </span>^?<span class="w"> </span>prod-ntp-3.ntp1.ps5.cano&gt;<span class="w">     </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
+<span class="w">                </span>^?<span class="w"> </span>pugot.canonical.com<span class="w">           </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
+<span class="w">                </span>^?<span class="w"> </span>alphyn.canonical.com<span class="w">          </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
+<span class="w">                </span>^?<span class="w"> </span><span class="m">157</span>.245.102.2<span class="w">                 </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
+<span class="w">                </span>^?<span class="w"> </span>ntp-mumbai.gombadi.com<span class="w">        </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
+<span class="w">                </span>^?<span class="w"> </span><span class="m">139</span>.59.55.93<span class="w">                  </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
+<span class="w">                </span>^?<span class="w"> </span><span class="m">144</span>.24.146.96<span class="w">                 </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
+<span class="w">                </span>^?<span class="w"> </span>ntp6.mum-in.hosts.301-mo&gt;<span class="w">     </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
+<span class="w">                </span>^?<span class="w"> </span>ntp5.mum-in.hosts.301-mo&gt;<span class="w">     </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
+<span class="w">                </span>^?<span class="w"> </span><span class="m">165</span>.22.211.200<span class="w">                </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
+<span class="w">                </span>^?<span class="w"> </span>ec2-13-126-27-131.ap-sou&gt;<span class="w">     </span><span class="m">0</span><span class="w">   </span><span class="m">7</span><span class="w">     </span><span class="m">0</span><span class="w">     </span>-<span class="w">     </span>+0ns<span class="o">[</span><span class="w">   </span>+0ns<span class="o">]</span><span class="w"> </span>+/-<span class="w">    </span>0ns
 
-                Reference ID    : <span class="m">47505300</span> <span class="o">(</span>GPS<span class="o">)</span>
-                Stratum         : <span class="m">1</span>
-                Ref <span class="nb">time</span> <span class="o">(</span>UTC<span class="o">)</span>  : Mon Jun <span class="m">05</span> <span class="m">06</span>:58:55 <span class="m">2023</span>
-                System <span class="nb">time</span>     : <span class="m">0</span>.000000001 seconds slow of NTP <span class="nb">time</span>
-                Last offset     : +0.000013462 seconds
-                RMS offset      : <span class="m">0</span>.001221735 seconds
-                Frequency       : <span class="m">8</span>.821 ppm slow
-                Residual freq   : +0.126 ppm
-                Skew            : <span class="m">0</span>.101 ppm
-                Root delay      : <span class="m">0</span>.000000001 seconds
-                Root dispersion : <span class="m">0</span>.000031861 seconds
-                Update interval : <span class="m">16</span>.0 seconds
+<span class="w">                </span>Reference<span class="w"> </span>ID<span class="w">    </span>:<span class="w"> </span><span class="m">47505300</span><span class="w"> </span><span class="o">(</span>GPS<span class="o">)</span>
+<span class="w">                </span>Stratum<span class="w">         </span>:<span class="w"> </span><span class="m">1</span>
+<span class="w">                </span>Ref<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="o">(</span>UTC<span class="o">)</span><span class="w">  </span>:<span class="w"> </span>Mon<span class="w"> </span>Jun<span class="w"> </span><span class="m">05</span><span class="w"> </span><span class="m">06</span>:58:55<span class="w"> </span><span class="m">2023</span>
+<span class="w">                </span>System<span class="w"> </span><span class="nb">time</span><span class="w">     </span>:<span class="w"> </span><span class="m">0</span>.000000001<span class="w"> </span>seconds<span class="w"> </span>slow<span class="w"> </span>of<span class="w"> </span>NTP<span class="w"> </span><span class="nb">time</span>
+<span class="w">                </span>Last<span class="w"> </span>offset<span class="w">     </span>:<span class="w"> </span>+0.000013462<span class="w"> </span>seconds
+<span class="w">                </span>RMS<span class="w"> </span>offset<span class="w">      </span>:<span class="w"> </span><span class="m">0</span>.001221735<span class="w"> </span>seconds
+<span class="w">                </span>Frequency<span class="w">       </span>:<span class="w"> </span><span class="m">8</span>.821<span class="w"> </span>ppm<span class="w"> </span>slow
+<span class="w">                </span>Residual<span class="w"> </span>freq<span class="w">   </span>:<span class="w"> </span>+0.126<span class="w"> </span>ppm
+<span class="w">                </span>Skew<span class="w">            </span>:<span class="w"> </span><span class="m">0</span>.101<span class="w"> </span>ppm
+<span class="w">                </span>Root<span class="w"> </span>delay<span class="w">      </span>:<span class="w"> </span><span class="m">0</span>.000000001<span class="w"> </span>seconds
+<span class="w">                </span>Root<span class="w"> </span>dispersion<span class="w"> </span>:<span class="w"> </span><span class="m">0</span>.000031861<span class="w"> </span>seconds
+<span class="w">                </span>Update<span class="w"> </span>interval<span class="w"> </span>:<span class="w"> </span><span class="m">16</span>.0<span class="w"> </span>seconds
 </pre></div>
 </div>
 <blockquote>
@@ -450,22 +448,22 @@ sudo sh /opt/xilinx/kr260-gps-1588-ptp/configs/chrony.sh
 </div></blockquote>
 </li>
 <li><p>The sync status can be verified from the output of <code class="docutils literal notranslate"><span class="pre">timedatectl</span></code>, printed on the terminal.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>                    Local time: Mon <span class="m">2023</span>-06-05 <span class="m">06</span>:59:14 UTC
-                Universal time: Mon <span class="m">2023</span>-06-05 <span class="m">06</span>:59:14 UTC
-                      RTC time: Mon <span class="m">2023</span>-06-05 <span class="m">06</span>:59:14
-                     Time zone: Etc/UTC <span class="o">(</span>UTC, +0000<span class="o">)</span>
-     System clock synchronized: yes
-                   NTP service: active
-               RTC <span class="k">in</span> <span class="nb">local</span> TZ: no
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">                    </span>Local<span class="w"> </span>time:<span class="w"> </span>Mon<span class="w"> </span><span class="m">2023</span>-06-05<span class="w"> </span><span class="m">06</span>:59:14<span class="w"> </span>UTC
+<span class="w">                </span>Universal<span class="w"> </span>time:<span class="w"> </span>Mon<span class="w"> </span><span class="m">2023</span>-06-05<span class="w"> </span><span class="m">06</span>:59:14<span class="w"> </span>UTC
+<span class="w">                      </span>RTC<span class="w"> </span>time:<span class="w"> </span>Mon<span class="w"> </span><span class="m">2023</span>-06-05<span class="w"> </span><span class="m">06</span>:59:14
+<span class="w">                     </span>Time<span class="w"> </span>zone:<span class="w"> </span>Etc/UTC<span class="w"> </span><span class="o">(</span>UTC,<span class="w"> </span>+0000<span class="o">)</span>
+<span class="w">     </span>System<span class="w"> </span>clock<span class="w"> </span>synchronized:<span class="w"> </span>yes
+<span class="w">                   </span>NTP<span class="w"> </span>service:<span class="w"> </span>active
+<span class="w">               </span>RTC<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span>TZ:<span class="w"> </span>no
 </pre></div>
 </div>
 </li>
 <li><p>The application then triggers phc2sys to update the PHC time with system time.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>***** Before triggering phc2sys ******
-phc_ctl<span class="o">[</span><span class="m">1116</span>.247<span class="o">]</span>: clock <span class="nb">time</span> is <span class="m">1679323830</span>.780230286 or Mon Mar <span class="m">20</span> <span class="m">14</span>:50:30 <span class="m">2023</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>*****<span class="w"> </span>Before<span class="w"> </span>triggering<span class="w"> </span>phc2sys<span class="w"> </span>******
+phc_ctl<span class="o">[</span><span class="m">1116</span>.247<span class="o">]</span>:<span class="w"> </span>clock<span class="w"> </span><span class="nb">time</span><span class="w"> </span>is<span class="w"> </span><span class="m">1679323830</span>.780230286<span class="w"> </span>or<span class="w"> </span>Mon<span class="w"> </span>Mar<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">14</span>:50:30<span class="w"> </span><span class="m">2023</span>
 
-***** After triggering phc2sys the PHC <span class="nb">time</span> is updated with system <span class="nb">time</span> ******
-phc_ctl<span class="o">[</span><span class="m">1121</span>.254<span class="o">]</span>: clock <span class="nb">time</span> is <span class="m">1685948359</span>.063594014 or Mon Jun  <span class="m">5</span> <span class="m">06</span>:59:19 <span class="m">2023</span>
+*****<span class="w"> </span>After<span class="w"> </span>triggering<span class="w"> </span>phc2sys<span class="w"> </span>the<span class="w"> </span>PHC<span class="w"> </span><span class="nb">time</span><span class="w"> </span>is<span class="w"> </span>updated<span class="w"> </span>with<span class="w"> </span>system<span class="w"> </span><span class="nb">time</span><span class="w"> </span>******
+phc_ctl<span class="o">[</span><span class="m">1121</span>.254<span class="o">]</span>:<span class="w"> </span>clock<span class="w"> </span><span class="nb">time</span><span class="w"> </span>is<span class="w"> </span><span class="m">1685948359</span>.063594014<span class="w"> </span>or<span class="w"> </span>Mon<span class="w"> </span>Jun<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">06</span>:59:19<span class="w"> </span><span class="m">2023</span>
 </pre></div>
 </div>
 </li>
@@ -473,61 +471,61 @@ phc_ctl<span class="o">[</span><span class="m">1121</span>.254<span class="o">]<
 </ul>
 </li>
 <li><p>On Second KR260 Board acting as slave, run the below command to sync the slave PHC time with Master PHC time.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo gps-1588-ptp-slave
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>gps-1588-ptp-slave
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Initially the Application prints the current system time and PHC time on terminal using <code class="docutils literal notranslate"><span class="pre">timedatectl</span> <span class="pre">&amp;&amp;</span> <span class="pre">phc_ctl</span> <span class="pre">/dev/ptp1</span> <span class="pre">--get</span></code> as shown below. It shows the sync status as no.</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>                   Local time: Mon <span class="m">2023</span>-03-20 <span class="m">14</span>:36:08 UTC
-               Universal time: Mon <span class="m">2023</span>-03-20 <span class="m">14</span>:36:08 UTC
-                     RTC time: Thu <span class="m">1970</span>-01-01 <span class="m">00</span>:04:17
-                    Time zone: Etc/UTC <span class="o">(</span>UTC, +0000<span class="o">)</span>
-    System clock synchronized: no
-                  NTP service: inactive
-              RTC <span class="k">in</span> <span class="nb">local</span> TZ: no
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">                   </span>Local<span class="w"> </span>time:<span class="w"> </span>Mon<span class="w"> </span><span class="m">2023</span>-03-20<span class="w"> </span><span class="m">14</span>:36:08<span class="w"> </span>UTC
+<span class="w">               </span>Universal<span class="w"> </span>time:<span class="w"> </span>Mon<span class="w"> </span><span class="m">2023</span>-03-20<span class="w"> </span><span class="m">14</span>:36:08<span class="w"> </span>UTC
+<span class="w">                     </span>RTC<span class="w"> </span>time:<span class="w"> </span>Thu<span class="w"> </span><span class="m">1970</span>-01-01<span class="w"> </span><span class="m">00</span>:04:17
+<span class="w">                    </span>Time<span class="w"> </span>zone:<span class="w"> </span>Etc/UTC<span class="w"> </span><span class="o">(</span>UTC,<span class="w"> </span>+0000<span class="o">)</span>
+<span class="w">    </span>System<span class="w"> </span>clock<span class="w"> </span>synchronized:<span class="w"> </span>no
+<span class="w">                  </span>NTP<span class="w"> </span>service:<span class="w"> </span>inactive
+<span class="w">              </span>RTC<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span>TZ:<span class="w"> </span>no
 
-              phc_ctl<span class="o">[</span><span class="m">2241</span>.152<span class="o">]</span>: clock <span class="nb">time</span> is <span class="m">1679324955</span>.989310878 or Mon Mar <span class="m">20</span> <span class="m">15</span>:09:15 <span class="m">2023</span>
+<span class="w">              </span>phc_ctl<span class="o">[</span><span class="m">2241</span>.152<span class="o">]</span>:<span class="w"> </span>clock<span class="w"> </span><span class="nb">time</span><span class="w"> </span>is<span class="w"> </span><span class="m">1679324955</span>.989310878<span class="w"> </span>or<span class="w"> </span>Mon<span class="w"> </span>Mar<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">15</span>:09:15<span class="w"> </span><span class="m">2023</span>
 </pre></div>
 </div>
 <ul>
 <li><p>Then it starts the ptp4l running as slave to align the PHC time from the best master on network.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    ********************** Ptp4l Application is Running ***************************
-    *************** PHC clock Synchronized with Master node PHC clock***************
-    phc_ctl<span class="o">[</span><span class="m">2261</span>.160<span class="o">]</span>: clock <span class="nb">time</span> is <span class="m">1685949488</span>.747679092 or Mon Jun  <span class="m">5</span> <span class="m">07</span>:18:08 <span class="m">2023</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>**********************<span class="w"> </span>Ptp4l<span class="w"> </span>Application<span class="w"> </span>is<span class="w"> </span>Running<span class="w"> </span>***************************
+<span class="w">    </span>***************<span class="w"> </span>PHC<span class="w"> </span>clock<span class="w"> </span>Synchronized<span class="w"> </span>with<span class="w"> </span>Master<span class="w"> </span>node<span class="w"> </span>PHC<span class="w"> </span>clock***************
+<span class="w">    </span>phc_ctl<span class="o">[</span><span class="m">2261</span>.160<span class="o">]</span>:<span class="w"> </span>clock<span class="w"> </span><span class="nb">time</span><span class="w"> </span>is<span class="w"> </span><span class="m">1685949488</span>.747679092<span class="w"> </span>or<span class="w"> </span>Mon<span class="w"> </span>Jun<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">07</span>:18:08<span class="w"> </span><span class="m">2023</span>
 </pre></div>
 </div>
 </li>
 <li><p>Next it triggers the phc2sys, to synchronize the slave system time with its PHC time. The application prints the output of <code class="docutils literal notranslate"><span class="pre">timedatectl</span></code> before and after running phc2sys to show the sync status</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>                    Local time: Mon <span class="m">2023</span>-03-20 <span class="m">15</span>:09:36 UTC
-                Universal time: Mon <span class="m">2023</span>-03-20 <span class="m">15</span>:09:36 UTC
-                      RTC time: Thu <span class="m">1970</span>-01-01 <span class="m">00</span>:37:44
-                     Time zone: Etc/UTC <span class="o">(</span>UTC, +0000<span class="o">)</span>
-     System clock synchronized: no
-                   NTP service: active
-               RTC <span class="k">in</span> <span class="nb">local</span> TZ: no     
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">                    </span>Local<span class="w"> </span>time:<span class="w"> </span>Mon<span class="w"> </span><span class="m">2023</span>-03-20<span class="w"> </span><span class="m">15</span>:09:36<span class="w"> </span>UTC
+<span class="w">                </span>Universal<span class="w"> </span>time:<span class="w"> </span>Mon<span class="w"> </span><span class="m">2023</span>-03-20<span class="w"> </span><span class="m">15</span>:09:36<span class="w"> </span>UTC
+<span class="w">                      </span>RTC<span class="w"> </span>time:<span class="w"> </span>Thu<span class="w"> </span><span class="m">1970</span>-01-01<span class="w"> </span><span class="m">00</span>:37:44
+<span class="w">                     </span>Time<span class="w"> </span>zone:<span class="w"> </span>Etc/UTC<span class="w"> </span><span class="o">(</span>UTC,<span class="w"> </span>+0000<span class="o">)</span>
+<span class="w">     </span>System<span class="w"> </span>clock<span class="w"> </span>synchronized:<span class="w"> </span>no
+<span class="w">                   </span>NTP<span class="w"> </span>service:<span class="w"> </span>active
+<span class="w">               </span>RTC<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span>TZ:<span class="w"> </span>no<span class="w">     </span>
 </pre></div>
 </div>
 <p>After phc2sys application starts ,updated system time showing below:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>                    Local time: Mon <span class="m">2023</span>-06-05 <span class="m">07</span>:18:13 UTC
-                Universal time: Mon <span class="m">2023</span>-06-05 <span class="m">07</span>:18:13 UTC
-                      RTC time: Mon <span class="m">2023</span>-06-05 <span class="m">07</span>:18:13
-                     Time zone: Etc/UTC <span class="o">(</span>UTC, +0000<span class="o">)</span>
-     System clock synchronized: yes
-                   NTP service: active
-               RTC <span class="k">in</span> <span class="nb">local</span> TZ: no
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">                    </span>Local<span class="w"> </span>time:<span class="w"> </span>Mon<span class="w"> </span><span class="m">2023</span>-06-05<span class="w"> </span><span class="m">07</span>:18:13<span class="w"> </span>UTC
+<span class="w">                </span>Universal<span class="w"> </span>time:<span class="w"> </span>Mon<span class="w"> </span><span class="m">2023</span>-06-05<span class="w"> </span><span class="m">07</span>:18:13<span class="w"> </span>UTC
+<span class="w">                      </span>RTC<span class="w"> </span>time:<span class="w"> </span>Mon<span class="w"> </span><span class="m">2023</span>-06-05<span class="w"> </span><span class="m">07</span>:18:13
+<span class="w">                     </span>Time<span class="w"> </span>zone:<span class="w"> </span>Etc/UTC<span class="w"> </span><span class="o">(</span>UTC,<span class="w"> </span>+0000<span class="o">)</span>
+<span class="w">     </span>System<span class="w"> </span>clock<span class="w"> </span>synchronized:<span class="w"> </span>yes
+<span class="w">                   </span>NTP<span class="w"> </span>service:<span class="w"> </span>active
+<span class="w">               </span>RTC<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span>TZ:<span class="w"> </span>no
 </pre></div>
 </div>
 </li>
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="via-ubuntu-gui">
-<h3>Via Ubuntu GUI<a class="headerlink" href="#via-ubuntu-gui" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="via-ubuntu-gui">
+<h3>Via Ubuntu GUI<a class="headerlink" href="#via-ubuntu-gui" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>On Master, open the terminal in Ubuntu GUI and run the below command to the open GUI</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo gps-1588-ptp-master -gui
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>gps-1588-ptp-master<span class="w"> </span>-gui
 </pre></div>
 </div>
 <p>Run the application by clicking on the buttons one after other.
@@ -539,7 +537,7 @@ phc_ctl<span class="o">[</span><span class="m">1121</span>.254<span class="o">]<
 </div></blockquote>
 <ul>
 <li><p>On Slave, open the terminal in Ubuntu GUI and run the below command to the open GUI</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo gps-1588-ptp-slave -gui
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>gps-1588-ptp-slave<span class="w"> </span>-gui
 </pre></div>
 </div>
 <p>Run the application by clicking on the buttons one after other.</p>
@@ -549,10 +547,10 @@ phc_ctl<span class="o">[</span><span class="m">1121</span>.254<span class="o">]<
 <blockquote>
 <div><p><strong>Note:</strong>  Make sure to run the slave Application, after running the Application on the master side</p>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="next-steps">
-<h2>Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="known-issues.html"><span class="doc">Known Issues</span></a></p></li>
 <li><p><a class="reference internal" href="sw_arch_platform.html"><span class="doc">Software Architecture of the Platform</span></a></p></li>
@@ -567,8 +565,8 @@ You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
---><p class="sphinxhide" align="center">Copyright (C) 2023 Advanced Micro Devices, Inc.</p></div>
-</div>
+--><p class="sphinxhide" align="center">Copyright (C) 2023 Advanced Micro Devices, Inc.</p></section>
+</section>
 
 
            </div>
@@ -584,7 +582,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2024, Advanced Micro Devices, Inc.
-      <span class="lastupdated">Last updated on March 25, 2024.
+      <span class="lastupdated">Last updated on July 09, 2024.
       </span></p>
   </div>
 
