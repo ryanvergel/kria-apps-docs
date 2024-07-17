@@ -39,6 +39,10 @@ This tutorial shows how to build a Platform for applications running on the KR26
    |Application |Platform|
    |----|----|
    |ROS 2 Multi-Node Communications via TSN |kr260_tsn_rs485pmod|
+   |10GigE Vision Camera - Defect Detect |Not Available Publicly due to Propriety IP|
+   |ROS 2 Perception Node |Not released publicly|
+   |Precision Time |kr260_pmod_gps|
+   |BIST|Not Available Publicly due to Propriety IP|
 
 3. The generated platform is located here:
 

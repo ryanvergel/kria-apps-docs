@@ -19,7 +19,7 @@ This tutorial is targeted for 2022.2 releases and tool chains.
 
 ## Steps
 
-There are many different ways to get a production SOM to boot from QSPI to eMMC. The following steps have been verified with Kria SOM:
+There are many different ways to get a production SOM to boot from QSPI to eMMC. In this doc we suggest the following steps with Kria SOM:
 
 0. [Create Vivado project and export .xsa file with Production SOM + Carrier Card peripheral support](#0-export-xsa-file-with-production-som-and-carrier-card-peripheral-support)
 
@@ -80,9 +80,9 @@ Note that if you are using a K24i - you will need to also enable the DDR ECC fea
 
 Unlike the Starter Kit SOM, the production SOM is shipped without QSPI pre-populated. A developer must first program QSPI with the appropriate boot firmware so that SOM will boot to U-Boot via the QSPI contents and then hand off to the Linux OS image in eMMC. The full QSPI binary for Starter Kit SOM is not released, however, each components can be generated as outlined in [bootfw overview](./bootfw_overview.md) and its pages. As a reference and an example for this guide, developer need to:
 
-    1. import the .xsa generated in [previous step](#0-export-xsa-file-with-production-som-and-carrier-card-peripheral-support)
-    2. use [Yocto support on Kria](https://xilinx.github.io/kria-apps-docs/yocto.html) combined with [importing new .xsa to Yocto](../../../yocto/source/docs/yocto_kria_support.md#importing-a-new-xsa-file)
-    3. update the dtb file to include CC peripherals
+1. import the .xsa generated in [previous step](#0-export-xsa-file-with-production-som-and-carrier-card-peripheral-support)
+2. use [Yocto support on Kria](https://xilinx.github.io/kria-apps-docs/yocto.html) combined with [importing new .xsa to Yocto](../../../yocto/source/docs/yocto_kria_support.md#importing-a-new-xsa-file)
+3. update the dtb file to include CC peripherals
 
 to generate a QSPI binary that supports production SOM + CC peripheral. Below are the commands expected (after repo setup, using 2023.2 as an example here):
 
@@ -96,12 +96,35 @@ to generate a QSPI binary that supports production SOM + CC peripheral. Below ar
                 HDF_BASE = "file://"
                 HDF_PATH = "/path/to/XSA/file.xsa"
                 UBOOT_DT_FILES = "zynqmp-sck-<cc name>-g-rev<rev>.dts" 
-                    #e.g. zynqmp-sck-kd-g-revA.dtb or zynqmp-sck-kr-g-revB.dtb or zynqmp-sck-kv-g-revB.dtb; you can find the dtb intended for each CC card by this command:
-                    # grep  sources/meta-kria/conf/machine/k2*-smk-k*.conf UBOOT_DTFILE_PREFIX
+                    #e.g. zynqmp-sck-kd-g-revA.dts or zynqmp-sck-kr-g-revB.dts or zynqmp-sck-kv-g-revB.dts; you can find the dtb intended for each CC card by this command:
+                    # grep UBOOT_DT_FILES sources/meta-kria/conf/machine/k2*-smk-k*.conf 
     #modify sources/meta-kria/recipes-bsp/bootbin/xilinx-bootbin_1.0.bbappend with the following:
                 BIF_PARTITION_IMAGE[u-boot-xlnx-fit-blob] = "${RECIPE_SYSROOT}/boot/devicetree/SMK-zynqmp-sck-<cc name>-g-rev<rev>.dtb" # e.g. SMK-zynqmp-sck-kd-g-revA.dtb or SMK-zynqmp-sck-kr-g-revB.dtb or SMK-zynqmp-sck-kv-g-revB.dtb
     MACHINE=<MACHINE name> bitbake kria-qspi
     ```
+
+<details>
+<summary> (click to expand) Additional required steps in generating QSPI for Image Recovery App on KD240 and KR260 </summary>
+
+If developer wish to use Image Recovery App to program eMMC on the next step, some extra steps are needed for KD240 and KR260. As of 2023.2 and 2024.1, image recovery app assumes a specific clock setup and do not derive that from .xsa file. When eMMC gets added on KR260 and KD240, it changes clocking structure for GEM, and ethernet would not function without some extra patches to account for the change in clocking.
+
+Example flow for 2023.2 on KR260:
+Example difference in clock divisors on KR260 before and after adding eMMC(shown as SD0):
+![before emmc](./media/before_emmc_kr260.png)
+
+![after emmc](./media/after_emmc_kr260.png)
+
+Note that IOPLL, from which gem0 clock is derived from, has changed from multiplier 60 divisor 2 to multiplier 90 divisor 3. The divisor0 for GEM 0 and GEM 1 has changed from 8 to 12. In 2023.2 and 2024.1, IOPLL configuration in image recovery app depends on fsbl psu_init code which is derived from xsa, so IOPLL configuration always keeps update with .xsa. However, GEM divisor depends on  local parameters in image recovery app source code and needs to be updated as instructed below:
+
+1. On Web interface, create a forked repo from https://github.com/Xilinx/embeddedsw, making sure "Copy the master branch only" is unchecked
+2. Clone the forked repo: ```git clone git@github.com:<forkname>/embeddedsw.git```
+3. check out the branch for the release (2023.2 in this case): ```git checkout -f xlnx_rel_v2023.2_update```
+4. Adjust the divisor value changes in the cloned repo as required for gem 0 [here](https://github.com/Xilinx/embeddedsw/blob/xlnx_rel_v2023.2_update/lib/sw_apps/img_rcvry/misc/tools/xparameters.h#L326:L327) and gem 1 [here](https://github.com/Xilinx/embeddedsw/blob/xlnx_rel_v2023.2_update/lib/sw_apps/img_rcvry/misc/tools/xparameters.h#L340:L341). Do note that KD240 and KR260 uses GEM 1 for its image recovery ethernet connection, and KV260 uses GEM 0 for its image recovery ethernet connection.
+5. Commit and push the change to forked repo and note down the commit id.
+6. In the yocto project before running bitbake cmd, open sources/meta-xilinx/meta-xilinx-standalone/classes/xlnx-embeddedsw.bbclass file, update [this line](https://github.com/Xilinx/meta-xilinx/blob/rel-v2023.2/meta-xilinx-standalone/classes/xlnx-embeddedsw.bbclass#L4) with forked repo url and [ this line](https://github.com/Xilinx/meta-xilinx/blob/rel-v2023.2/meta-xilinx-standalone/classes/xlnx-embeddedsw.bbclass#L11) with commit id noted in step 5
+7. re-run bitbake command ```MACHINE=<MACHINE name> bitbake kria-qspi```
+
+</details>
 
 Once you have a QSPI binary .bin file in ```$TMPDIR/deploy/images/<MACHINE name>```, it is time to program it to the board. Mount the Kria production SOM onto a carrier card, connect it to a host computer using micro-usb cable or a AMD Platform cable. Leave SD card slot empty and connect to power.
 
