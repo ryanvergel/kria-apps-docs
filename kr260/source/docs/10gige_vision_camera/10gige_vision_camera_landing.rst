@@ -9,8 +9,8 @@ Overview
 
 .. toctree::
    :maxdepth: 1
-  
-   Overview <docs/overview>
+
+   Overview <src/overview>
 
 *******************************
 Introduction
@@ -18,15 +18,18 @@ Introduction
 
 .. toctree::
    :maxdepth: 1
-  
-   Introduction <docs/introduction>
+
+   Introduction <src/introduction>
 
 Features
 ================================
 
-* Raw image from a live camera source (SONY IMX547).
+* Raw image from a live camera source (SONY IMX547 color and mono sensors).
 
 * Sphinx GE Viewer to display the live streaming data through 10 GigE pipeline.
+
+* Run camera stream through defect detection algorithm implemented in PL and
+  display defect decision on monitor.
 
 
 *******************************
@@ -35,9 +38,9 @@ Quick Start
 
 .. toctree::
    :maxdepth: 1
-  
+
    KR260 Starter Kit Linux Boot <../kria_starterkit_linux_boot>
-   Setting up the Board and Application deployment <docs/app_deployment>
+   Setting up the Board and Application deployment <src/app_deployment>
 
 
 ***************************
@@ -52,9 +55,7 @@ Tutorials
 
 .. toctree::
    :maxdepth: 1
-  
-   KR260 Starter Kit Linux Boot <../kria_starterkit_linux_boot>
-   Building the Design components <../building_the_design>
+
    Generate Custom Firmware <../generating_custom_firmware>
 
 
@@ -66,20 +67,22 @@ Architecture
 .. toctree::
    :maxdepth: 1
 
-   Framos Sensors <docs/sensor>
-   Sensor to Image 10GigE Vision Pipeline <docs/10gige>
-   Software Architecture of the Accelerator <docs/sw_arch_accel_dd>
-   Hardware Architecture of the Accelerator <docs/hw_arch_accel_dd>
+   Hardware Architecture of the Platform <src/10gige>
+   Hardware Architecture of the Accelerator <src/hw_arch_accel_dd>
+   Software Architecture of the Platform <src/sw_arch_platform_dd>
+   Software Architecture of the Accelerator <src/sw_arch_accel_dd>
 
 
 *******************************
-Repository
+Repositories
 *******************************
 
 .. toctree::
-  :maxdepth: 1
-  
-  Software Repository <https://github.com/Xilinx/mv-defect-detect>
+   :maxdepth: 1
+
+   Software Application Repository <https://github.com/Xilinx/mv-defect-detect>
+   Sony IMX547 Linux Driver Repository <https://github.com/Xilinx/mv-camera-sensor-module>
+   AMD Vitis Vision ISP Linux Driver Repository <https://github.com/Xilinx/xilinx-isp-module>
 
 
 ******
@@ -88,10 +91,9 @@ Other
 
 .. toctree::
    :maxdepth: 1
-  
-   Debugging <docs/debug>
-   Known Issues & Limitations <docs/known_issues>
 
+   Debugging <src/debug>
+   Known Issues & Limitations <src/known_issues>
 
 
 Xilinx Support
@@ -101,7 +103,7 @@ GitHub issues will be used for tracking requests and bugs. For questions, go to 
 
 
 
-.. 
+..
    License
    Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 

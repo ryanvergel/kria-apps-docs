@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
 <!-- OneTrust Cookies Consent Notice start for xilinx.github.io -->
@@ -27,14 +26,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/documentation_options.js?v=2406f4f9"></script>
-        <script src="../_static/doctools.js?v=888ff710"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="FRAMOS KRIA Documentation" href="10gige_vision_camera/docs/sensor.html" />
-    <link rel="prev" title="Tool Flow Overview" href="building_the_design.html" /> 
+    <link rel="next" title="Hardware Architecture of the Platform" href="10gige_vision_camera/src/10gige.html" />
+    <link rel="prev" title="10GigE Machine Vision Defect Detect Application Deployment" href="10gige_vision_camera/src/app_deployment.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -47,6 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Kria™ KR260
+            <img src="../_static/xilinx-header-logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2022.1
@@ -135,10 +137,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  <tr>
  <td align="center"><h1>Generation of Firmware binaries</h1> </td>
  </tr>
-</table><section id="generation-of-firmware-binaries">
-<h1>Generation of Firmware binaries<a class="headerlink" href="#generation-of-firmware-binaries" title="Link to this heading">¶</a></h1>
-<section id="testing-custom-accelerator-firmware-binaries">
-<h2>Testing custom Accelerator/firmware binaries<a class="headerlink" href="#testing-custom-accelerator-firmware-binaries" title="Link to this heading">¶</a></h2>
+</table><div class="section" id="generation-of-firmware-binaries">
+<h1>Generation of Firmware binaries<a class="headerlink" href="#generation-of-firmware-binaries" title="Permalink to this heading">¶</a></h1>
+<div class="section" id="testing-custom-accelerator-firmware-binaries">
+<h2>Testing custom Accelerator/firmware binaries<a class="headerlink" href="#testing-custom-accelerator-firmware-binaries" title="Permalink to this heading">¶</a></h2>
 <p>Customers requiring to test custom hardware/accelerator can do so by following the below steps on the ubuntu platform.</p>
 <p>It is assumed that a custom platform design has been generated using an AMD Vivado™/AMD Vitis™ and bitstream/xclbin is available. Similarly, a correct device-tree overlay for the custom hardware is created or generated. AMD  DTG could be used for the device-tree generation. Refer to the <a class="reference external" href="https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18842279/Build+Device+Tree+Blob">link</a> for more information on DTG.</p>
 <p>From previous steps, following binaries are available:</p>
@@ -156,17 +158,17 @@ A runtime device-tree blob corresponding to the PL bitstream is required (<code 
 <li><p>custom-devicetree.dtsi -&gt; custom-devicetree.dtbo</p></li>
 </ul>
 <p>An example has been illustrated below as a reference:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--branch<span class="w"> </span>xlnx_rel_v2022.1<span class="w"> </span>https://github.com/Xilinx/kria-apps-firmware.git
-mv<span class="w"> </span>custom-hardware.bit<span class="w"> </span>kria-apps-firmware/kr260/tsn-rs485pmod/kr260-tsn-rs485pmod.bit
-mv<span class="w"> </span>custom-device-tree.dtsi<span class="w"> </span>kria-apps-firmware/kr260/tsn-rs485pmod/kr260-tsn-rs485pmod.dtsi
-<span class="nb">cd</span><span class="w"> </span>kria-apps-firmware
-make<span class="w"> </span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone --branch xlnx_rel_v2022.1 https://github.com/Xilinx/kria-apps-firmware.git
+mv custom-hardware.bit kria-apps-firmware/kr260/tsn-rs485pmod/kr260-tsn-rs485pmod.bit
+mv custom-device-tree.dtsi kria-apps-firmware/kr260/tsn-rs485pmod/kr260-tsn-rs485pmod.dtsi
+<span class="nb">cd</span> kria-apps-firmware
+make 
 </pre></div>
 </div>
 <p>For more information, refer to the instructions provided in the readme file <a class="reference external" href="https://github.com/Xilinx/kria-apps-firmware/blob/xlnx_rel_v2022.1/README.md">here</a>.</p>
-</section>
-<section id="next-steps">
-<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">¶</a></h2>
+</div>
+<div class="section" id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Go back to the <a class="reference internal" href="../index.html"><span class="doc">KR260 SOM designs start page</span></a>.</p></li>
 </ul>
@@ -178,8 +180,8 @@ You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
---></section>
-</section>
+--></div>
+</div>
 
 
            </div>
@@ -187,15 +189,15 @@ Unless required by applicable law or agreed to in writing, software distributed 
           
 				  
 				  <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="building_the_design.html" class="btn btn-neutral float-left" title="Tool Flow Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="10gige_vision_camera/docs/sensor.html" class="btn btn-neutral float-right" title="FRAMOS KRIA Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="10gige_vision_camera/src/app_deployment.html" class="btn btn-neutral float-left" title="10GigE Machine Vision Defect Detect Application Deployment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="10gige_vision_camera/src/10gige.html" class="btn btn-neutral float-right" title="Hardware Architecture of the Platform" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2024, Advanced Micro Devices, Inc.
-      <span class="lastupdated">Last updated on July 09, 2024.
+      <span class="lastupdated">Last updated on July 19, 2024.
       </span></p>
   </div>
 
